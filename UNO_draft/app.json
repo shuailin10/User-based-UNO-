@@ -1,0 +1,35 @@
+{
+  "pages":[ 
+    "pages/first/first",
+    "pages/logs/logs",
+    "pages/game/game",
+    "pages/setup/setup",
+    "pages/index/index", 
+    "pages/help/help"  
+
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#cccccc",
+    "navigationBarTitleText": "UNO对战平台",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor":"#ccccff",
+    "list": [
+      {
+        "pagePath": "pages/first/first",
+        "text": "用户反馈"
+      },
+      {
+        "pagePath": "pages/first/first",
+        "text": "退出"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

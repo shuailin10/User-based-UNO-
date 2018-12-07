@@ -1,0 +1,73 @@
+.bg{
+  height:1200rpx;
+  position:relative;
+  width:750rpx;
+}
+
+.animal1{
+  position:absolute;
+  top: 350rpx;
+  left:25rpx;
+  height:150rpx;
+  width:150rpx;
+}
+.animal2{
+  position:absolute;
+  top: 50rpx;
+  left:300rpx;
+  height:150rpx;
+  width:150rpx;
+}
+.animal3{
+  position:absolute;
+  top: 350rpx;
+  right:25rpx;
+  height:160rpx;
+  width:160rpx;
+}
+.card-back{
+  position:absolute;
+  top:320rpx;
+  left:280rpx;
+  height:240rpx;
+  width:180rpx;
+}
+.getcard{ 
+  position:absolute;
+  height: 85rpx;
+  width:180rpx;
+  top:650rpx;
+  left:20rpx;
+}
+.choosecard{ 
+  position:absolute;
+  height: 85rpx;
+  width:180rpx;
+  top:650rpx;
+  left:275rpx;
+}
+.uno{ 
+  position:absolute;
+  height: 85rpx;
+  width:180rpx;
+  top:650rpx;
+  right:20rpx;
+}
+.avatar {
+  position:absolute;
+  width: 150rpx;
+  height: 150rpx;
+  top:900rpx;
+  left:290rpx;
+  border-radius: 50%;
+}
+.slide-image{
+  position:absolute;
+  height:150rpx;
+  width:112.5rpx;
+}
+.arrow{
+  position: absolute;
+  height: 100rpx;
+  width: 50rpx;
+}

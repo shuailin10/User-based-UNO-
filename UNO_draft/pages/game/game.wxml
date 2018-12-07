@@ -1,0 +1,19 @@
+<cover-image src="https://github.com/shuailin10/UserBasedUNO/blob/master/images/bg.jpg?raw=true" class="bg" mode='scaleToFill'/>
+
+  <cover-image src="../images/animal1.png" class="animal1"/>
+  <cover-image src="../images/animal2.png" class="animal2"/>
+  <cover-image src="../images/animal3.png" class="animal3"/>
+  <cover-image src="../images/arrow.png" class="arrow" style="left:{{arrow_left}}rpx; top: {{arrow_top}}rpx;"/>
+  <cover-image src="{{discardedCardurl}}" class="card-back"/>
+  <cover-image bindtap="drawCard" src="../images/抽牌btn.png" class="getcard"/>
+  <cover-image bindtap="playCard" src="../images/出牌btn.png" class="choosecard"/>
+  <cover-image bindtap="uno" src="../images/unobtn.png" class="uno"/>
+  <cover-image class="avatar" src='{{userInfo.avatarUrl}}'/>
+  
+  <view wx:for="{{cards}}" wx:for-item="sets">
+     <cover-image bindtap="card_click" data-id="{{sets.left_pos}}" src="{{sets.img}}" class="slide-image" style="left:{{sets.left_pos}}rpx; top: {{sets.top_pos}}rpx;"/>
+  </view>
+
+  
+ 
+  
