@@ -14,19 +14,7 @@
     "navigationBarTitleText": "UNO对战平台",
     "navigationBarTextStyle":"black"
   },
-  "tabBar": {
-    "backgroundColor":"#ccccff",
-    "list": [
-      {
-        "pagePath": "pages/first/first",
-        "text": "用户反馈"
-      },
-      {
-        "pagePath": "pages/first/first",
-        "text": "退出"
-      }
-    ]
-  },
+  
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000

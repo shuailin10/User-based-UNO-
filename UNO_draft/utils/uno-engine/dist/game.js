@@ -37,6 +37,10 @@ var Game = /** @class */ (function () {
         for (var i = 0; i < _this._players.length; i++){
             _this.yellers[_this._players[i].name] = false;
         }
+        _this.alldiscarded=[0,0,0,0,0,0,0,0,0,0,0,0,0];
+        _this.playercard=[0,0,0,0];
+        //马文峻
+
         //初始化yellers的状态
         return _this;
         //如果改变this的属性，那么_this的属性似乎也会相应更改？
@@ -178,6 +182,8 @@ var Game = /** @class */ (function () {
      * @fires Game#nextplayer
      * @fires Game#end
      */
+
+
     Game.prototype.play = function (card, _a) {
         var silent = (_a === void 0 ? { silent: false } : _a).silent;
         //如果没有传入silent的信息的话，那么silent = false，即不silent，如果传入了{silent: true}的话，那么就silent = true
@@ -217,12 +223,22 @@ var Game = /** @class */ (function () {
             case card_1.Values.WILD_DRAW_FOUR:
                 //应该加一个返回让当前玩家重置discardedCard的选项
                 this.privateDraw(this.getNextPlayer(), 4);
+
+                if(this.getNextPlayer().name==='Player'){
+                    this.playercard=[0,0,0,0];
+                }           //马文峻
+
                 this.goToNextPlayer(true);
                 //下一个玩家抽4张牌，下一个玩家被silent了
                 break;
             case card_1.Values.DRAW_TWO:
                 //应该加一个返回让当前玩家重置discardedCard的选项
                 this.privateDraw(this.getNextPlayer(), 2);
+
+                if (this.getNextPlayer().name === 'Player') {
+                    this.playercard = [0, 0, 0, 0];
+                }           //马文峻
+
                 this.goToNextPlayer(true);
                 //下一个玩家抽2张牌，下一个玩家被silent了
                 break;
@@ -272,6 +288,7 @@ var Game = /** @class */ (function () {
             ****************/
             // else if the user has already yelled or if he has more than 2 cards...
             // is there anyone with 1 card at hand that did not yell uno?
+            console.log(this._players);
             drawingPlayers = this._players.filter(function (p) { return p.hand.length == 1 && !_this.yellers[p.name]; });
             // if there isn't anyone...
             if (drawingPlayers.length == 0) {

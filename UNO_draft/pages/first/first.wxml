@@ -11,7 +11,7 @@
     </swiper-item>  
 </swiper>
  <view class="container">
-<cover-image src="https://github.com/shuailin10/UserBasedUNO/blob/master/images/bg.jpg?raw=true"style="height: 650rpx;" class="bg" mode='bottom right'/>
+<cover-image src="https://github.com/shuailin10/UserBasedUNO/blob/master/images/bg.jpg?raw=true"style="height: 800rpx;" class="bg" mode='bottom right'/>
   <cover-view class="subitem1">
         <cover-image bindtap='GoToGame'style="width: 300rpx; height: 140rpx; background-color: #eeeeee;"  src="https://github.com/shuailin10/UserBasedUNO/blob/master/images/%E5%BC%80%E5%A7%8B%E6%B8%B8%E6%88%8F.png?raw=true"></cover-image>
 </cover-view>
@@ -19,8 +19,8 @@
         <cover-image bindtap='GoToSetup' style="width: 300rpx; height: 140rpx; background-color: #eeeeee;" mode="{{item.mode}}" src="https://github.com/shuailin10/UserBasedUNO/blob/master/images/%E9%9A%BE%E5%BA%A6%E8%AE%BE%E7%BD%AE.png?raw=true"></cover-image>
 </cover-view>
   <cover-view class="subitem5">
-        <cover-image bindtap='GoToHelp' style="width: 300rpx; height: 140rpx; background-color: #eeeeee;" mode="{{item.mode}}" src="https://github.com/shuailin10/UserBasedUNO/blob/master/images/%E6%B8%B8%E6%88%8F%E5%B8%AE%E5%8A%A9.png?raw=true"></cover-image>
+        <cover-image bindtap='GoToHelp' style="width: 300rpx; height: 140rpx; background-color: #eeeeee;" mode="{{item.mode}}" src="https://github.com/shuailin10/UserBasedUNO/blob/master/images/%E5%B8%AE%E5%8A%A9%E5%8F%8D%E9%A6%88.png?raw=true"></cover-image>
 </cover-view>
 </view>
 
-<cover-image src="https://github.com/shuailin10/UserBasedUNO/blob/master/images/UNO.png?raw=true" class="logo" style="width:200rpx;height:200rpx;"/>
+<cover-image src="https://github.com/shuailin10/UserBasedUNO/blob/master/images/UNO.png?raw=true" class="logo" style="width:225rpx;height:225rpx;"/>
