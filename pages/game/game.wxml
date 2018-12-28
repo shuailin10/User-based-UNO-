@@ -1,0 +1,43 @@
+<image src="https://github.com/shuailin10/UserBasedUNO/blob/master/images/bg.jpg?raw=true" class="bg" mode='scaleToFill'/>
+
+  <image src="../images/animal1.png" class="animal1"/>
+  <image src="../images/animal2.png" class="animal2"/>
+  <image src="../images/animal3.png" class="animal3"/>
+  <image src="../images/animal4.png" class="animal4"/>
+  <image src="../images/arrow.png" class="arrow" style="left:{{arrow_left}}rpx; top: {{arrow_top}}rpx;"/>
+  <image src="{{discardedCardurl}}" class="card-back"/>
+  <cover-image bindtap="drawCard" src="../images/抽牌btn.png" class="getcard"/>
+  <cover-image bindtap="playCard" src="../images/出牌btn.png" class="choosecard"/>
+  <image bindtap="uno" src="../images/unobtn.png" class="uno"/>
+  <image class="avatar" src='{{userInfo.avatarUrl}}'/>
+  <view wx:for="{{cards}}" wx:for-item="sets">
+     <image bindtap="card_click" data-id="{{sets.left_pos}}" src="{{sets.img}}" class="slide-image" style="left:{{sets.left_pos}}rpx; top: {{sets.top_pos}}rpx;"/>
+  </view>
+  
+  <view wx:for="{{card_num}}" wx:for-item="cnum">
+    <view class="show_card_num"style="left:{{cnum.left}}rpx; top: {{cnum.top}}rpx;" > {{cnum.num}} </view>
+  </view>
+
+  <view wx:for="{{forbidden}}" wx:for-item="sets">
+    <image class="show_forbidden" src="../images/forbidden.png" style="left:{{sets.leftpos}}rpx; top: {{sets.toppos}}rpx;"/>
+  </view>
+
+  <view wx:for="{{plus_two}}" wx:for-item="sets">
+    <view class="show_card_num" style="left:{{sets.leftpos}}rpx; top: {{sets.toppos}}rpx;">+2</view>
+  </view>
+
+  <view wx:for="{{plus_four}}" wx:for-item="sets">
+    <view class="show_card_num" style="left:{{sets.leftpos}}rpx; top: {{sets.toppos}}rpx;">+4</view>
+  </view>
+
+  <view wx:for="{{saywords}}" wx:for-item="sets">
+    <image class="cloud" src="{{sets.words}}" style="left:{{sets.leftpos}}rpx; top: {{sets.toppos}}rpx;"/>
+  </view>
+
+  <image class="reverse" src="{{reverse}}" style="left: 50rpx; top:50rpx;"/>
+
+  
+
+  
+ 
+  
