@@ -5,7 +5,8 @@ var Player = /** @class */ (function () {
     //方法：getCardByValue, hasCard, removeCard
     function Player(name) {
         this.hand = [];//对手牌进行初始化
-        name = !!name ? name.trim() : name; //如果输入了名字，也就是说name!==undefined，那么就把name边上的空格去掉(by name.trim())
+        name = !!name ? name.trim() : name; 
+        //如果输入了名字，也就是说name!==undefined，那么就把name边上的空格去掉(by name.trim())
         //如果没有输入名字，即name===undefined，那么继续把这个name传下去，则会在下一步丢出error
         if (!name)
             throw new Error('Player must have a name');
@@ -56,11 +57,9 @@ var Player = /** @class */ (function () {
     Player.prototype.valueOf = function () {
         return this.name;
     };
-    //不知道这两个有什么区别...但是这个valueof似乎只在这个程序里出现过...
     Player.prototype.toString = function () {
         return this.name;
     };
     return Player;
 }());
 exports.Player = Player;
-//# sourceMappingURL=player.js.map

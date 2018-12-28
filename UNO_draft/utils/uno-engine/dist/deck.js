@@ -4,12 +4,12 @@ var shuffle_1 = require("shuffle");
 var card_1 = require("./card.js");
 function createUnoDeck() {
     /*
-      108 cards
+      108 张牌
   
-      76x numbers (0-9, all colors)
-      8x draw two (2x each color)
-      8x reverse (2x each color)
-      8x skip (2x each color)
+      76x 普通牌 (0-9, 所有颜色)
+      8x +2牌 (2x 所有颜色)
+      8x 反向牌 (2x 所有颜色)
+      8x 禁止牌 (2x 所有颜色)
       4x wild
       4x wild draw four
     */
@@ -20,9 +20,7 @@ function createUnoDeck() {
             cards.push(new card_1.Card(value, color));
         return cards;
     };
-    // for each color...
     for (var color = 0; color <= 3; color++) {
-        // CREATE NUMBERS
         deck.push.apply(deck, createCards(1, card_1.Values.ZERO, color));
         for (var n = card_1.Values.ONE; n <= card_1.Values.NINE; n++) {
             deck.push.apply(deck, createCards(2, n, color));
@@ -56,15 +54,11 @@ var Deck = /** @class */ (function () {
     Deck.prototype.draw = function (num) {
         num = num || 1;
         var cards = [];
-        // if the amount to draw is more than the cards we have...
         if (num >= this.length) {
             var length_1 = this.length;
-            // draw all we have...
             cards = cards.concat(this.shuffle.draw.call(this, length_1));
-            // regenerate the draw pile
             this.shuffle.reset();
             this.shuffle.shuffle();
-            // then draw the rest we need
             num = num - length_1;
             if (num === 0)
                 return cards;
@@ -74,4 +68,3 @@ var Deck = /** @class */ (function () {
     return Deck;
 }());
 exports.Deck = Deck;
-//# sourceMappingURL=deck.js.map
